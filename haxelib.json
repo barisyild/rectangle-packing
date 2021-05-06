@@ -1,0 +1,19 @@
+{
+    "name": "rectangle-packing",
+    "license": "CUSTOM",
+    "tags": [
+        "openfl"
+    ],
+    "description": "Super fast haxe port of villekoskelaorg's rectangle packing algorithm",
+    "contributors": [
+		"villekoskelaorg <Ville Koskela>",
+		"barisyild <Baris Cagri Yildirim>"
+    ],
+    "releasenote": "",
+    "version": "1.0.0",
+    "url": "https://github.com/barisyild/RectanglePacking",
+    "dependencies": {
+        "openfl":""
+    },
+	"classPath": "src"
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+
+    <meta title="RectanglePackerDemo" package="org.villekoskela.RectanglePackerDemo" version="1.0.0" company="OpenFL" />
+    <app main="org.villekoskela.RectanglePackerDemo" path="Export" file="RectanglePackerDemo" />
+
+    <window fps="60" />
+
+    <!--<define name="stats" if="html5" />-->
+    <source path="src" />
+
+    <haxelib name="openfl" />
+
+    <haxedef name="js-es" value="6"/>
+</project>
