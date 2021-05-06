@@ -171,11 +171,10 @@ class RectanglePacker
          */
     public function packRectangles(sort:Bool = true):Int
     {
-        /*if (sort)
+        if (sort)
         {
-            mInsertList.sortOn("width", Array.NUMERIC);
-        }*/
-        //TODO: implement required
+            mInsertList.sort((a,b) -> a.width - b.width);
+        }
 
         while (mInsertList.length > 0)
         {
