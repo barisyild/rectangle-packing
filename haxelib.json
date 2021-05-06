@@ -6,8 +6,7 @@
     ],
     "description": "Super fast haxe port of villekoskelaorg's rectangle packing algorithm",
     "contributors": [
-		"villekoskelaorg <Ville Koskela>",
-		"barisyild <Baris Cagri Yildirim>"
+		"barisyild"
     ],
     "releasenote": "",
     "version": "1.0.0",
