@@ -3,9 +3,9 @@ Rectangle Packer
 
 |Platform|Supported|Performance|Notes|
 |--|--|--|--|
-|HTML5|✔️|High|Native vector array not supported on this target|
-|Flash/Adobe AIR|✔️|Best|
-|Windows|✔️|Best|
+|HTML5|✔️|Best|Native vector array not supported on this target|
+|Flash/Adobe AIR|✔️|High|
+|Windows|✔️|High|
 |Linux|❓|||
 |Mac OS|❓|||
 |Android|❓|||
