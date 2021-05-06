@@ -1,7 +1,23 @@
 Rectangle Packer
-================
+================ 
 
-ActionScript3 utility class to pack smaller rectangles within larger container rectangle efficiently.
+|Platform|Supported|Performance|Notes|
+|--|--|--|--|
+|HTML5|✔️|High|Native vector array not supported on this target|
+|Flash/Adobe AIR|✔️|Best|
+|Windows|✔️|Best|
+|Linux|❓|||
+|Mac OS|❓|||
+|Android|❓|||
+|iOS|✔️|||
+|Neko|✔️|Low||
+|Emscripten|❓|||
+
+Live Demo: https://rectangle-packing.surge.sh/
+  
+---
+
+Haxe utility class to pack smaller rectangles within larger container rectangle efficiently.
 
 Packs 500 rectangles in 1-2ms on a decent computer.
 
