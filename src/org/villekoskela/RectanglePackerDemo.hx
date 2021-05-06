@@ -32,7 +32,6 @@ package org.villekoskela;
 
 import openfl.display.StageAlign;
 import openfl.display.StageScaleMode;
-import openfl.Vector;
 import openfl.display.Bitmap;
 import openfl.display.BitmapData;
 import openfl.display.Sprite;
@@ -63,8 +62,8 @@ class RectanglePackerDemo extends Sprite
 
     private var mPacker:RectanglePacker;
     private var mScalingBox:ScalingBox;
-
-    private var mRectangles:Vector<Rectangle> = new Vector<Rectangle>();
+    
+    private var mRectangles:#if flash openfl.Vector #else Array #end<Rectangle> = new #if flash openfl.Vector #else Array #end<Rectangle>();
 
     public function new()
     {

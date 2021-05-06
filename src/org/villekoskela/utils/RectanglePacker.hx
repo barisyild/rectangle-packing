@@ -30,7 +30,6 @@
  */
 package org.villekoskela.utils;
 
-import openfl.Vector;
 import flash.geom.Rectangle;
 
 /**
@@ -49,14 +48,14 @@ class RectanglePacker
 
     private var mInsertList:Array<SortableSize> = [];
 
-    private var mInsertedRectangles:Vector<IntegerRectangle> = new Vector<IntegerRectangle>();
-    private var mFreeAreas:Vector<IntegerRectangle> = new Vector<IntegerRectangle>();
-    private var mNewFreeAreas:Vector<IntegerRectangle> = new Vector<IntegerRectangle>();
+    private var mInsertedRectangles:#if flash openfl.Vector #else Array #end<IntegerRectangle> = new #if flash openfl.Vector #else Array #end<IntegerRectangle>();
+    private var mFreeAreas:#if flash openfl.Vector #else Array #end<IntegerRectangle> = new #if flash openfl.Vector #else Array #end<IntegerRectangle>();
+    private var mNewFreeAreas:#if flash openfl.Vector #else Array #end<IntegerRectangle> = new #if flash openfl.Vector #else Array #end<IntegerRectangle>();
 
     private var mOutsideRectangle:IntegerRectangle;
 
-    private var mSortableSizeStack:Vector<SortableSize> = new Vector<SortableSize>();
-    private var mRectangleStack:Vector<IntegerRectangle> = new Vector<IntegerRectangle>();
+    private var mSortableSizeStack:#if flash openfl.Vector #else Array #end<SortableSize> = new #if flash openfl.Vector #else Array #end<SortableSize>();
+    private var mRectangleStack:#if flash openfl.Vector #else Array #end<IntegerRectangle> = new #if flash openfl.Vector #else Array #end<IntegerRectangle>();
 
     public var rectangleCount(get, never):Int;
 
@@ -218,7 +217,7 @@ class RectanglePacker
          * Removes rectangles from the filteredAreas that are sub rectangles of any rectangle in areas.
          * @param areas rectangles from which the filtering is performed
          */
-    private function filterSelfSubAreas(areas:Vector<IntegerRectangle>):Void
+    private function filterSelfSubAreas(areas:#if flash openfl.Vector #else Array #end<IntegerRectangle>):Void
     {
         var i:Int = areas.length - 1;
         //for (var i:int = areas.length - 1; i >= 0; i--)
@@ -260,7 +259,7 @@ class RectanglePacker
          * @param areas the areas to be divided
          * @return list of new areas
          */
-    private function generateNewFreeAreas(target:IntegerRectangle, areas:Vector<IntegerRectangle>, results:Vector<IntegerRectangle>):Void
+    private function generateNewFreeAreas(target:IntegerRectangle, areas:#if flash openfl.Vector #else Array #end<IntegerRectangle>, results:#if flash openfl.Vector #else Array #end<IntegerRectangle>):Void
     {
         // Increase dimensions by one to get the areas on right / bottom this rectangle touches
         // Also add the padding here
@@ -311,9 +310,9 @@ class RectanglePacker
          * Divides the area into new sub areas around the divider.
          * @param divider rectangle that intersects the area
          * @param area rectangle to be divided into sub areas around the divider
-         * @param results vector for the new sub areas around the divider
+         * @param results array for the new sub areas around the divider
          */
-    private function generateDividedAreas(divider:IntegerRectangle, area:IntegerRectangle, results:Vector<IntegerRectangle>):Void
+    private function generateDividedAreas(divider:IntegerRectangle, area:IntegerRectangle, results:#if flash openfl.Vector #else Array #end<IntegerRectangle>):Void
     {
         var count:Int = 0;
         var rightDelta:Int = area.right - divider.right; //Const
