@@ -5,7 +5,7 @@ Rectangle Packer
 |--|--|--|--|
 |HTML5|✔️|Best|Native vector array not supported on this target|
 |Flash/Adobe AIR|✔️|High|
-|Windows|✔️|High|
+|Windows|✔️|Best|
 |Linux|❓|||
 |Mac OS|❓|||
 |Android|❓|||
