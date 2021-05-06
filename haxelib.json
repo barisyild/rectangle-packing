@@ -1,6 +1,6 @@
 {
     "name": "rectangle-packing",
-    "license": "CUSTOM",
+    "license": "MIT",
     "tags": [
         "openfl"
     ],
